@@ -158,7 +158,7 @@ namespace OCTOBER.Server.Controllers.UD
                 await _context.Database.BeginTransactionAsync();
 
                 var itm = await _context.Schools.Where(x => x.SchoolId == _SchoolDTO.SchoolId).FirstOrDefaultAsync();
-            
+
                 itm.SchoolName = _SchoolDTO.SchoolName;
 
                 _context.Schools.Update(itm);
